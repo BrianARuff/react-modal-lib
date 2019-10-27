@@ -1,7 +1,7 @@
 {
   "name": "react-modal-lib",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "private": false,
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -27,5 +27,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "``` import React, { Component } from \"react\"; import Portal from \"./Portal\";",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianARuff/react-modal-lib.git"
+  },
+  "keywords": [
+    "react-modal-lib",
+    "react-modal",
+    "modal",
+    "modal-lib"
+  ],
+  "author": "Brian Ruff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianARuff/react-modal-lib/issues"
+  },
+  "homepage": "https://github.com/BrianARuff/react-modal-lib#readme"
 }
