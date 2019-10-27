@@ -1,8 +1,11 @@
 ## React Modal Lib
 
 ```
+
 import Portal from "react-modal-lib"
+
 ```
+
 import React, { Component } from "react";
 import Portal from "./Portal";
 
