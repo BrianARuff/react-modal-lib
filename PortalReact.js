@@ -28,7 +28,8 @@ class Portal extends Component {
   }
 
   componentWillUnmount() {
-    document.body.removeChild(this.modalContainer);
+    document.body.remove(this.modalContainer);
+    this.modalContainer = null;
   }
 
   render() {
