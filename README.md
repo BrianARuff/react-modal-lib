@@ -1,14 +1,8 @@
 ## React Modal Lib
 
 ```
-
-import Portal from "react-modal-lib"
-
-```
-
-```
 import React, { Component } from "react";
-import Portal from "./Portal";
+import Portal from "react-modal-lib"
 
 class App extends Component {
   constructor(...args) {
