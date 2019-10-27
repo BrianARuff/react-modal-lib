@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import ReactDOM from "react-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class Portal extends Component {
+  constructor(props) {
+    super(props);
+    this.modalContainer = document.createElement("div");
+    this.modalContainer.id = this.props.id || "modal";
+    this.exitSpan = document.createElement("span");
+  }
+
+  componentDidMount() {
+    // container styles...
+    const { style } = this.modalContainer;
+    style.width = "100%";
+    style.backgroundColor = "rgba(0,0,0,0.2)";
+    style.position = "absolute";
+    style.top = 0;
+    style.left = 0;
+    style.display = "flex";
+    style.justifyContent = "center";
+    style.alignContent = "center";
+    style.alignItems = "center";
+    style.minHeight = "100vh";
+
+    // insert after body...
+    document.body.insertAdjacentElement("afterbegin", this.modalContainer);
+  }
+
+  componentWillUnmount() {
+    document.body.removeChild(this.modalContainer);
+    this.modalContainer = null;
+    document.body.removeChild(this.exitSpan);
+    this.exitSpan = null;
+  }
+
+  render() {
+    return ReactDOM.createPortal(this.props.children, this.modalContainer);
+  }
 }
 
-export default App;
+export default Portal;
