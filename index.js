@@ -69,7 +69,7 @@ function (_Component) {
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      document.body.remove(this.modalContainer);
+      document.body.removeChild(this.modalContainer);
       this.modalContainer = null;
     }
   }, {
